@@ -1,0 +1,155 @@
+/* About.css */
+/* Add the font import at the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Resetting default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa; /* Adjust background color if needed */
+  color: #333;
+}
+
+.homePage {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coreTeamHeader {
+  text-align: center;
+  padding: 40px;
+}
+
+.academicYear {
+  font-size: 24px;
+  color: #6E7A91;
+  font-weight: 400;
+  margin-bottom: 10px; /* Space between "Academic Year" and "Core Team" */
+}
+
+.coreTeamTitle {
+  font-size: 48px;
+  color: #6E7A91;
+  font-weight: 700; /* Bold for "Core Team" */
+}
+
+.teamSection {
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  color: #111B47;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.profileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profileCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.profileCard:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 auto 10px;
+}
+
+.memberName {
+  font-size: 20px;
+  color: #111B47;
+  font-weight: 600;
+}
+
+.memberRole {
+  font-size: 18px;
+  color: #666;
+}
+
+.memberDescription {
+  color: #666;
+  font-size: 16px;
+  height: 100px; /* Set a fixed height for consistent card sizes */
+  overflow: hidden;
+}
+
+.readMore {
+  color: #111B47;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.readMore:hover {
+  color: #828282;
+}
+
+/* Add any additional global or specific styles you may need */
+
+.readMore {
+    color: #0000EE; /* Typical hyperlink blue */
+    text-decoration: underline; /* Underline to signify it's clickable */
+    background: none; /* No background */
+    border: none; /* No border */
+    padding: 0; /* Reset padding */
+    cursor: pointer; /* Cursor to indicate clickable */
+    font-family: inherit; /* Inherit font from parent */
+    font-size: inherit; /* Inherit font size from parent */
+    margin-top: 15px; /* Space from the description text */
+    display: inline; /* Inline to flow like text */
+  }
+
+  .profileContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* This will create three columns */
+    gap: 20px; /* Adjust the gap as needed */
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .profileCard {
+    /* Adjust the margin auto to center the cards */
+    margin: auto;
+    /* Other styles remain the same */
+  }
+  
+  /* Media queries to adjust the grid for different screen sizes */
+  @media (max-width: 768px) {
+    .profileContainer {
+      grid-template-columns: repeat(2, 1fr); /* This will create two columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profileContainer {
+      grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+  }
