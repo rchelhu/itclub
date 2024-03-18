@@ -40,10 +40,6 @@ body {
   font-weight: 700; /* Bold for "Core Team" */
 }
 
-.teamSection {
-  width: 100%;
-}
-
 .sectionTitle {
   font-size: 24px;
   color: #111B47;
@@ -127,29 +123,51 @@ body {
     display: inline; /* Inline to flow like text */
   }
 
-  .profileContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* This will create three columns */
-    gap: 20px; /* Adjust the gap as needed */
-    justify-content: center;
-    align-items: start;
-  }
-  
-  .profileCard {
-    /* Adjust the margin auto to center the cards */
+  .teamSection {
+    max-width: 1200px; /* Set a max-width based on your design */
     margin: auto;
-    /* Other styles remain the same */
+    padding: 20px;
   }
   
-  /* Media queries to adjust the grid for different screen sizes */
-  @media (max-width: 768px) {
-    .profileContainer {
-      grid-template-columns: repeat(2, 1fr); /* This will create two columns for smaller screens */
-    }
+  /* About.css */
+/* Other styles remain the same... */
+
+/* Update the grid setup for the profile cards */
+.profileContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three columns for the widest row */
+  gap: 20px; /* Adjust the gap as needed */
+  justify-content: center; /* This will help center the entire grid */
+}
+
+/* Target the first two cards to center them on the top row */
+.profileContainer > :first-child {
+  grid-column-start: 2; /* Center the first card on the top row */
+}
+
+.profileContainer > :nth-child(2) {
+  grid-column-start: 3; /* Position the second card next to the first one */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .profileContainer {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
   }
-  
-  @media (max-width: 480px) {
-    .profileContainer {
-      grid-template-columns: 1fr; /* Single column for very small screens */
-    }
+
+  .profileContainer > :first-child {
+    grid-column-start: 1; /* Align the first card to the first column on smaller screens */
   }
+}
+
+@media (max-width: 480px) {
+  .profileContainer {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+}
+
+/* Style adjustments for the individual cards */
+.profileCard {
+  width: 220px; /* Adjust width as necessary */
+  /* Rest of your .profileCard styles */
+}
